@@ -1,0 +1,56 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+*.egg-info/
+*.egg
+
+# Django specific
+*.log
+db.sqlite3
+media/
+staticfiles/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+*.secret
+
+# Migrations
+*/migrations/*.pyc
+*/migrations/*.pyc
+
+# IDE / Editor specific
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node modules (if using frontend)
+node_modules/
+
+# PostgreSQL database files (if any local dumps are stored)
+*.pgsql
+*.sql
+*.db
+
+# JWT & OAuth related security files
+jwt_secret.key
+oauth_tokens.json
+
+# Docker files
+docker-compose.override.yml
+*.dockerfile
+
+# Cache and temporary files
+*.bak
+*.temp
+*.cache
+
+# macOS specific
+.DS_Store
