@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+from datetime import timedelta
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -40,6 +42,24 @@ INSTALLED_APPS = [
     'rest_framework',
     'tracker',
 ]
+
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+    ),
+    "DEFAULT_PERMISSION_CLASSES": (
+        "rest_framework.permissions.IsAuthenticated",  # Require authentication by default
+    ),
+}
+
+AUTH_USER_MODEL = "tracker.CustomUser"
+
+SIMPLE_JWT = {
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=15),  # Short-lived access token
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=7),  # Refresh token lasts 7 days
+    "ROTATE_REFRESH_TOKENS": True,  # New refresh token issued on refresh
+    "BLACKLIST_AFTER_ROTATION": True,  # Old refresh tokens become invalid
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
