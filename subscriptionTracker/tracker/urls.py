@@ -1,6 +1,7 @@
-from django.urls import path
-from .views import HomeView
+from django.urls import path, include
 
 urlpatterns = [
-    path('', HomeView.as_view(), name=('Home')),
+    path("auth/", include("tracker.urls.auth_urls")),
+    path("users/", include("tracker.urls.user_urls")),
+    path("subscriptions/", include("tracker.urls.subscription_urls")),
 ]
