@@ -3,8 +3,8 @@ from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from django.utils.timezone import now
 from rest_framework.response import Response
 from rest_framework import status
-from Tracker.models import Subscription
-from Tracker.serializers.subscription_serializers import SubscriptionSerializer
+from tracker.models import Subscription
+from tracker.serializers.subscription_serializer import SubscriptionSerializer
 
 class SubscriptionViewSet(ModelViewSet):
     """Handles CRUD operations for subscriptions"""

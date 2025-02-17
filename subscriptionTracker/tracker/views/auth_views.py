@@ -1,7 +1,7 @@
-from rest_frameworkd import APIView
-from rest_frameworkd.response import response
-from rest_frameworkd.permissions import AllowAny, IsAuthenticated
-from rest_frameworkd_simplejwt.token import RefreshToekn
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework.permissions import AllowAny, IsAuthenticated
+from rest_framework_simplejwt.tokens import RefreshToken
 from tracker.serializers.auth_serializers import SignUpSerializer
 
 class SignUpView(APIView):

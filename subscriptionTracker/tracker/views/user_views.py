@@ -1,6 +1,6 @@
 from rest_framework.viewsets import ModelViewSet
 from django.contrib.auth import get_user_model
-from Tracker.serializers.auth_serializers import SignUpSerializer
+from tracker.serializers.auth_serializers import SignUpSerializer
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 
 User = get_user_model()

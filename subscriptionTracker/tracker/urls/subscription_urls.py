@@ -1,6 +1,6 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from Tracker.views.subscription_views import SubscriptionViewSet
+from tracker.views.subscription_views import SubscriptionViewSet
 
 router = DefaultRouter()
 router.register(r"", SubscriptionViewSet)
